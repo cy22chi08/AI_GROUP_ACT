@@ -9,19 +9,19 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component
+        rb = GetComponent<Rigidbody2D>(); 
     }
 
     void Update()
     {
-        // Get input from keyboard (WASD or Arrow keys)
+       
         movement.x = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
         movement.y = Input.GetAxisRaw("Vertical");   // W/S or Up/Down
     }
 
     void FixedUpdate()
     {
-        // Move the player
+    
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
